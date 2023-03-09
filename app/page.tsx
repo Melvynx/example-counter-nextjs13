@@ -1,7 +1,6 @@
 import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import { Counter } from './Counter';
-import styles from './page.module.css';
 
 const filePath = path.join(process.cwd(), '/src/store/text.txt');
 
@@ -15,8 +14,7 @@ export default async function Home() {
   writeFile(filePath, String(fileCount + 1), 'utf-8');
 
   return (
-    <div>
-      <h1 className={styles.title}>Bonjour NextJS 13</h1>
+    <div className="m-auto w-fit my-8">
       <Counter count={fileCount} />
     </div>
   );

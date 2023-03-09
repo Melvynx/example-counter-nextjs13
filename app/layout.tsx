@@ -8,10 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <header className="title">NextJS13</header>
-        <div>{children}</div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
